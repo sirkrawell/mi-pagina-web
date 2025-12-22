@@ -29,3 +29,131 @@
     font-weight: 700;
     font-style: normal;
 }
+
+
+.seccion__cuerpo_uno {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+}
+
+.seccion__cuerpo_uno__caja {
+    background-color: #eeeeee;
+    border: 2px solid #929292;
+    border-radius: 10px;
+    height: 100%;
+    width: 200px;
+    transition: transform .4s ease,color .4s ease;
+    color: #363636;
+    cursor: pointer;
+}
+
+.seccion__cuerpo_uno__caja:hover {
+    transform: scale(1.05) rotate(2deg);
+    color: #000000;
+}
+
+.seccion__cuerpo_uno__caja::selection {
+    background-color: #08cfae;
+    color:#fff;
+}
+
+
+
+.seccion__cuerpo_uno__caja__marco {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+
+    border-radius: 8px 8px 0px 0px;
+    
+    
+    
+}
+
+.seccion__cuerpo_uno__caja__marco__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: 50% 50%;
+    
+
+}
+
+.seccion__cuerpo_uno__caja__titulo {
+
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    border-bottom: 2px solid #929292;
+    word-break:break-all;
+
+    margin: 5px 0;
+
+
+}
+
+.seccion__cuerpo_uno__caja__etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seccion__cuerpo_uno__caja__etiquetas__etiqueta {
+
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    border: 1px solid #8d8d8d;
+    border-left: 4px solid brown;
+    border-radius: 2px;
+    margin: 4px;
+    padding: 2px;
+    
+}
+
+.borde-anaranjado {
+    border-left: 4px solid #d13711;
+}
+
+.borde-azul {
+    border-left: 4px solid #2a47a5;
+}
+
+.borde-amarillo {
+    border-left: 4px solid #e4e000;}
+
+
+.seccion__cuerpo_uno__caja__pie {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    border-top: 2px solid #929292;
+    align-items: center;
+
+    padding: 5px;
+}
+.seccion__cuerpo_uno__caja__pie > div {
+    width: 100%;
+}
+
+.seccion__cuerpo_uno__caja__pie__nivel {
+    
+    
+}
+
+.seccion__cuerpo_uno__caja__pie__activo {
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 10px;
+}
+
+.seccion__cuerpo_uno__caja__pie__activo > span {
+    display: block;
+    background: linear-gradient(to top, #04b90d, #5bff63);
+    width: 20px;
+    border-radius: 50%;
+    
+}
