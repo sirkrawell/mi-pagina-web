@@ -3,10 +3,56 @@
     margin: 0;
 }
 
+.navegacion {
+    background-color: #1a1a1a;
+    color: #fff;
+    height: auto;
+}
+
+.navegacion > ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    justify-content: flex-start;
+
+}
+
+.navegacion > ul > li {
+    margin: 7px 20px;
+}
+
+.navegacion > ul > li > a {
+    text-decoration: none;
+}
+
+.img-icon {
+    height: 30px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1);
+    transition: transform .3s ease, filter .3s ease;
+}
+
+.img-icon:hover {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1.5);
+    transform: scale(1.1);
+}
+
+
 body::selection {
     background-color: #08cfae;
     color:#fff;
 }
+
+/* ESTILO PARA LOS ICONOS DE LA CABECERA */
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 
 
 
@@ -15,6 +61,7 @@ body::selection {
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-shadow: 0 4px 8px  #d8d8d8;
 }
 
 .seccion__cabecera__titulo {
@@ -25,12 +72,24 @@ body::selection {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+
+    width: 50%;
+}
+.seccion__cabecera__derecha {
+    width: 50%;
+
+    font-family: "Stack Sans Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
 }
 
 
 
 
 .seccion__cuerpo_uno {
+    margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(6, minmax(200px, 1fr));
     
@@ -41,7 +100,7 @@ body::selection {
 .seccion__cuerpo_uno__caja {
     
 
-    background-color: #eeeeee;
+    background-color: #f7f7f7;
     border: 2px solid #929292;
     border-radius: 10px;
     height: 100%;
@@ -109,7 +168,7 @@ body::selection {
 
     border: 1px solid #8d8d8d;
     border-left: 4px solid brown;
-    border-radius: 2px;
+    border-radius: 5px;
     margin: 4px;
     padding: 2px;
     
@@ -174,6 +233,6 @@ body::selection {
 @media (max-width: 600px) {
   .seccion__cuerpo_uno {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
-    background-color: red;
+   
   }
 }
