@@ -42,16 +42,6 @@ body::selection {
     color:#fff;
 }
 
-/* ESTILO PARA LOS ICONOS DE LA CABECERA */
-
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
 
 
 
@@ -81,8 +71,15 @@ body::selection {
     font-family: "Stack Sans Text", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
+    
     font-style: normal;
-
+    display: flex;
+    flex-direction: column;
+}
+.seccion__cabecera__derecha > div {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 
 
@@ -235,4 +232,10 @@ body::selection {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
    
   }
+}
+
+@media (max-width:474px) {
+    .seccion__cabecera__derecha {
+        visibility: hidden;
+    }
 }
