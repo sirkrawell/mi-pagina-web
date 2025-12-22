@@ -1,12 +1,11 @@
 class Proyecto {
-    constructor(urlImagen,titulo,tecnologias,nivel,listo,urlWeb) {
+    constructor(urlImagen,titulo,tecnologias,nivel,listo) {
         this.id = proyectos.length
         this.urlImagen = urlImagen
         this.titulo = titulo
         this.tecnologias = tecnologias
         this.nivel = nivel
         this.listo = listo
-        this.urlWeb = urlWeb
     }
 }
 
@@ -19,18 +18,13 @@ let proyectos = []
 
 let $seccion = document.querySelector(".seccion__cuerpo_uno")
 
-function agregarAlArreglo(urlImagen,titulo,tecnologias,nivel,listo,urlWeb) {
-    const proyecto = new Proyecto(urlImagen,titulo,tecnologias,nivel,listo,urlWeb)
+function agregarAlArreglo(urlImagen,titulo,tecnologias,nivel,listo) {
+    const proyecto = new Proyecto(urlImagen,titulo,tecnologias,nivel,listo)
     proyectos.push(proyecto)
-    console.log(proyecto)
-
-    
 
     //AQUI CREO LA CAJA QUE CONTIENE TODO
     let cajaPadre = document.createElement("div")
     cajaPadre.classList.add("seccion__cuerpo_uno__caja")
-
-    cajaPadre.setAttribute("ID",proyecto.id)
 
     //AQUI COLOCO LA IMAGEN
     let urlImagenNueva = document.createElement("img")
@@ -110,22 +104,6 @@ function agregarAlArreglo(urlImagen,titulo,tecnologias,nivel,listo,urlWeb) {
     //AQUI LO COLOCO DENTRO DE LA CAJA PADRE
     cajaPadre.appendChild(pieNuevo)
 
-    // Agregar event listeners para mouseover y mouseout
-    cajaPadre.addEventListener("mouseover", () => {
-        const img = cajaPadre.querySelector(".seccion__cuerpo_uno__caja__marco__img");
-        img.style.height = "120%";
-    });
-
-    cajaPadre.addEventListener("mouseout", () => {
-        const img = cajaPadre.querySelector(".seccion__cuerpo_uno__caja__marco__img");
-        img.style.height = "100%";
-    });
-
-    cajaPadre.addEventListener("click",(a)=>{
-        console.log(a.currentTarget.id)
-        window.open(proyectos[a.currentTarget.id].urlWeb)
-        
-    })
 
     //AQUI METO TODO A LA SECCION
     $seccion.appendChild(cajaPadre)
@@ -139,8 +117,7 @@ function crearElementoDiv(arregloProyectos) {
 
 
 
-agregarAlArreglo("img/adivina-la-bandera.jpeg","Adivina La Bandera",["html","css","javascript"],"medio",true,"https://sirkrawell.github.io/adivina-la-bandera/")
-agregarAlArreglo("img/adivina-la-palabra.png","Adivina la palabra",["html","css"],"medio",true,"https://sirkrawell.github.io/adivinar-palabra/")
+agregarAlArreglo("img/imagen-loro.png","Adivina.io",["html","css","javascript"],"medio",true)
 
 
 
@@ -151,19 +128,12 @@ let $frameCaja = document.querySelector(".seccion__cuerpo_uno__caja")
 let $imagenCaja = document.querySelector(".seccion__cuerpo_uno__caja__marco__img")
 
 
-// $frameCaja.addEventListener("mouseover", ()=> {
-//     $imagenCaja.style.height = "120%"
+$frameCaja.addEventListener("mouseover", ()=> {
+    $imagenCaja.style.height = "120%"
 
-// })
+})
 
-// $frameCaja.addEventListener("mouseout", ()=> {
-//     $imagenCaja.style.height = "100%"
+$frameCaja.addEventListener("mouseout", ()=> {
+    $imagenCaja.style.height = "100%"
    
-// })
-
-
-//AQUI VOY A LEER LOS TARGET ASIGNADOS A CADA CAJA PARA ABRIR LOS LINKS
-
-$frameCaja.addEventListener("click", (a)=>{
-    console.log(a.target)
 })

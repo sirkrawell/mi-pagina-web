@@ -28,18 +28,24 @@ body::selection {
 }
 
 
+
+
 .seccion__cuerpo_uno {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    
     justify-items: center;
+    gap:25px 10px;
 }
 
 .seccion__cuerpo_uno__caja {
+    
+
     background-color: #eeeeee;
     border: 2px solid #929292;
     border-radius: 10px;
     height: 100%;
-    width: 200px;
+    width: 220px;
     transition: transform .4s ease,color .4s ease;
     color: #363636;
     cursor: pointer;
@@ -83,7 +89,7 @@ body::selection {
     font-style: normal;
 
     border-bottom: 2px solid #929292;
-    word-break:break-all;
+    /* word-break:break-all; */
 
     margin: 5px 0;
 
@@ -152,4 +158,22 @@ body::selection {
     width: 20px;
     border-radius: 50%;
     
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(200px, 1fr));
+}
+
+@media (max-width: 1200px) {
+  .seccion__cuerpo_uno {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion__cuerpo_uno {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    background-color: red;
+  }
 }
