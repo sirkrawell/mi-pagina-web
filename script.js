@@ -22,3 +22,18 @@ agregarAlArreglo("imagen.png","titulo prueba",["html","css"],"medio",true)
 
 
 console.log(proyectos)
+
+
+let $frameCaja = document.querySelector(".seccion__cuerpo_uno__caja")
+let $imagenCaja = document.querySelector(".seccion__cuerpo_uno__caja__marco__img")
+
+
+$frameCaja.addEventListener("mouseover", ()=> {
+    $imagenCaja.style.height = "120%"
+
+})
+
+$frameCaja.addEventListener("mouseout", ()=> {
+    $imagenCaja.style.height = "100%"
+   
+})
