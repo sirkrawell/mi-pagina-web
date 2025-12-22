@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.fuente_bits {
+    
+    font-family: "Stack Sans Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.seccion__cabecera {
+    height: 18vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.seccion__cabecera__titulo {
+    font-size: 4em;
+    margin-left: 50px;
+
+    font-family: "Stack Sans Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
