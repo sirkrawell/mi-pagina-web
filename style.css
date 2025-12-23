@@ -211,6 +211,8 @@ body::selection {
 .seccion__cuerpo_uno__caja__pie__activo > span {
     display: block;
     background: linear-gradient(to top, #04b90d, #5bff63);
+    /* background: linear-gradient(to top, #ff8422, #ffef5b); */
+    /* background: linear-gradient(to top, #0493b9, #5bffed); */
     width: 20px;
     border-radius: 50%;
     

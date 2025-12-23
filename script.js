@@ -104,6 +104,16 @@ function agregarAlArreglo(urlImagen,titulo,tecnologias,nivel,listo,urlWeb) {
     let pieNuevoActivoSpan = document.createElement("span")
     pieNuevoActivoSpan.innerHTML = "."
 
+     if(listo==true) {
+        pieNuevoActivoSpan.style.backgroundImage = "linear-gradient(to top, #04b90d, #5bff63);";
+    }
+    else if(listo==false) {
+        pieNuevoActivoSpan.style.backgroundImage = "linear-gradient(to top, #ff8422, #ffef5b)";
+    }
+    else {
+        pieNuevoActivoSpan.style.backgroundImage = "linear-gradient(to top, #0493b9, #5bffed);";
+    }
+
     pieNuevoActivo.appendChild(pieNuevoActivoSpan)
     pieNuevo.appendChild(pieNuevoActivo)
 
@@ -141,7 +151,7 @@ function crearElementoDiv(arregloProyectos) {
 
 agregarAlArreglo("img/adivina-la-bandera.jpeg","Adivina La Bandera",["html","css","javascript"],"medio",true,"https://sirkrawell.github.io/adivina-la-bandera/")
 agregarAlArreglo("img/adivina-la-palabra.png","Adivina la palabra",["html","css","javascript"],"medio",true,"https://sirkrawell.github.io/adivinar-palabra/")
-agregarAlArreglo("img/tienda.png","Tienda",["html","css","javascript"],"medio",true,"https://sirkrawell.github.io/tienda/")
+agregarAlArreglo("img/tienda.png","Tienda",["html","css","javascript"],"medio",false,"https://sirkrawell.github.io/tienda/")
 
 
 
