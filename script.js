@@ -141,6 +141,7 @@ function crearElementoDiv(arregloProyectos) {
 
 agregarAlArreglo("img/adivina-la-bandera.jpeg","Adivina La Bandera",["html","css","javascript"],"medio",true,"https://sirkrawell.github.io/adivina-la-bandera/")
 agregarAlArreglo("img/adivina-la-palabra.png","Adivina la palabra",["html","css","javascript"],"medio",true,"https://sirkrawell.github.io/adivinar-palabra/")
+agregarAlArreglo("img/tienda.png","Tienda",["html","css","javascript"],"medio",true,"https://sirkrawell.github.io/tienda/")
 
 
 
