@@ -393,7 +393,7 @@ body::selection {
     }
 }
 
-@media screen and (max-width: 450px) { 
+@media screen and (max-width: 495px) { 
 
     .seccion__cuerpo_dos__caja__foto_e_info {
         grid-row: 1/3;
