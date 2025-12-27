@@ -179,7 +179,7 @@ $frameCaja.addEventListener("click", (a)=>{
     console.log(a.target)
 })
 
-//EFECTO APARECE SUAVEMENTE DESDE ABAJO
+//EFECTO APARECE SUAVEMENTE DESDE ABAJO, gracias GEMINI AI por recordarme
 
 let $cajaInformacion =  document.querySelector(".seccion__cuerpo_dos__caja")
 
@@ -192,7 +192,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, { 
-    threshold: 0.4 // Se activa cuando el 10% del elemento es visible
+    threshold: 0.3 // Se activa cuando el 10% del elemento es visible
 });
 
 // Seleccionamos todos los elementos que queremos que tengan el efecto

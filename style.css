@@ -371,13 +371,25 @@ body::selection {
         height: 110px;
         width: 110px;
     }
+    .seccion__cuerpo_dos__caja__foto_e_info {
+        font-size: 0.8em;
+    }
 }
 
 
 
 @media (max-width:474px) {
+    .seccion__cabecera {
+        
+    }
+    .seccion__cabecera__titulo {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
     .seccion__cabecera__derecha {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -397,7 +409,7 @@ body::selection {
         border-radius: 25px 25px 0 0;
     }
     .seccion__cuerpo_dos__caja__foto_e_info__info {
-        font-size: .8em;
+        font-size: 1em;
         text-align: center;
     }
 
