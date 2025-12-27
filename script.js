@@ -178,3 +178,22 @@ let $imagenCaja = document.querySelector(".seccion__cuerpo_uno__caja__marco__img
 $frameCaja.addEventListener("click", (a)=>{
     console.log(a.target)
 })
+
+//EFECTO APARECE SUAVEMENTE DESDE ABAJO
+
+let $cajaInformacion =  document.querySelector(".seccion__cuerpo_dos__caja")
+
+const observer = new IntersectionObserver((entries) => {
+    console.log(entries)
+    entries.forEach(entry => {
+        // Si el elemento es visible en el viewport
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { 
+    threshold: 0.4 // Se activa cuando el 10% del elemento es visible
+});
+
+// Seleccionamos todos los elementos que queremos que tengan el efecto
+document.querySelectorAll('.flotar').forEach((el) => observer.observe(el));
